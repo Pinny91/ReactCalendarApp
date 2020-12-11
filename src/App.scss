@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -18,12 +18,23 @@
 }
 .month-view {
   width: 500px;
+  text-align: center;
+  .month,
+  .year {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+      cursor: pointer;
+      user-select: none;
+    }
+  }
   .days {
     display: flex;
     flex-direction: row;
     div {
       flex: 1 0 14%;
-      text-align: center;
     }
   }
   .dates {
@@ -31,7 +42,6 @@
     flex-wrap: wrap;
     div {
       flex: 1 0 14%;
-      text-align: center;
     }
   }
 }
